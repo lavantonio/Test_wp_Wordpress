@@ -1,0 +1,334 @@
+
+/*
+Theme Name: Test_wp
+Theme URI: https://antoniovalda.com
+Author: Lav Antonio Valda Rajic
+Discription: Simple WP  theme
+Version: 1.0
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500,600,700&display=swap');
+:root {
+    --primary: #3f505a;   /* rgb(63, 80, 90) */
+    --secondary:#49c9d4;  /* rgb(73, 201, 212) */
+    --brown:#b7b2b2b8;
+    --white: #fff;
+    --fontFamily: 'Roboto', sans-serif;
+    --transition: .3s ease;
+    --fontSize: 16px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+}
+.py-5 {
+    padding: 100px 0 !important;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    padding: 0px;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.row{
+  display:flex;
+  flex-wrap: wrap;
+}
+header h1::after {
+  display: block;
+  content: "";
+  width: 20%;
+  background-color: var(--brown);
+  height: 3px;
+  margin: 20px auto;
+}
+h2::after {
+  display: block;
+  content: "";
+  width: 15%;
+  background-color: var(--secondary);
+  height: 3px;
+  margin: 20px auto;
+}
+/* * * * * * * * * * * * * * * * * header * * * * * * * * * * * * * * * * */
+header{
+  padding: 30px 0 100px 0;
+  background-color: var(--primary);
+  height: 40vh;
+  clip-path: polygon(0% 0%, 0% 90%, 50% 100%, 100% 90%, 100% 0%);
+  background-image: linear-gradient(rgb(63, 80, 90, 0.8), rgba(63, 80, 90, 0.8)), url(img/header.jpg);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+header .row{
+  justify-content: space-between;
+}
+header .logo{
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 650;
+  color: var(--white);
+}
+header .list{
+  display: flex;
+  align-items: center;
+}
+header ul{
+  display: flex;
+  margin-bottom: 0;
+}
+header .list li{
+  list-style: none;
+  padding: 0 15px;
+}
+header .list a{
+  color: var(--secondary);
+  text-decoration: none;
+}
+header .list a:hover{
+  color: var(--white);
+  transition: var(--transition);
+  text-decoration: none;
+}
+header .active{
+  color: var(--white) !important;
+}
+header .column{
+  justify-content: space-between;
+}
+header .hTag{
+  text-align: center;
+  padding-top: 40px;
+}
+header h1{
+  font-size: 4rem;
+  color: var(--white);
+  font-weight: 400;
+}
+header h1 span{
+  font-weight: 700;
+}
+header p{
+  color:var(--secondary);
+  margin-bottom: 3rem;
+}
+header .button{
+  background-color: var(--white);
+  color: var(--primary);
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+}
+header .button:hover {
+  background: var(--primary);
+  cursor: pointer;
+  color: var(--white);
+  transition: .4s ease;
+  border-radius: 30px;
+  text-decoration: none;
+}
+/* * * * * * * * * * * * * * * * * Filozofija * * * * * * * * * * * * * * * * */
+.filozofija {
+  padding: 50px 0;
+  text-align: center;
+}
+.filozofija span:first-child{
+  padding-right: 7px;
+}
+.filozofija span{
+  color: var(--secondary);
+}
+.filozofija p:first-child{
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: right;
+}
+.filozofija p:last-child{
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: left;
+}
+.filozofija p{
+  padding: 0 20px;
+}
+/* * * * * * * * * * * * * * * * * Footer * * * * * * * * * * * * * * * * */
+footer{
+  padding: 180px 0 50px 0;
+  background-color: var(--secondary);
+  clip-path: polygon(0% 40%, 100% 0%, 100% 100%, 0% 100%);
+  background-image: linear-gradient(rgba(73, 201, 212, 0.9), rgba(73, 201, 212, 0.9)), url(img/footer.jpg);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+footer .column:nth-child(1){
+  flex-grow: 1;
+  flex-basis: 0;
+}
+footer .column:nth-child(2){
+  flex-grow: 1;
+  flex-basis: 0;
+}
+footer .column:nth-child(3){
+  flex-grow: 1;
+  flex-basis: 0;
+}
+footer span{
+  padding-right: 7px;
+}
+footer h3{
+  padding-bottom: 20px;
+}
+footer i{
+  color: var(--white);
+  font-size: 2rem;
+  padding: 0 15px;
+}
+
+footer i:hover{
+  color: var(--primary);
+  font-size: 2rem;
+  padding: 0 15px;
+  transition: var(--transition);
+}
+/* * * * * * * * * * * * * * * * * Header Blog * * * * * * * * * * * * * * * * */
+.headerBlog h1{
+  padding-bottom: 90px;
+}
+/* * * * * * * * * * * * * * * * * Blog * * * * * * * * * * * * * * * * */
+.blog {
+  padding: 50px 0;
+}
+.blog .column:first-child{
+  flex-grow: 3;
+  flex-basis: 0;
+}
+.blog .column:last-child{
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.blog article{
+  padding: 20px 15px 20px 0;
+}
+.blog img{
+  max-width: 100%;
+  height: auto;
+}
+.blog .hTag{
+  flex-grow: 3;
+  flex-basis: 0;
+}
+.blog .photo{
+  flex-grow: 2;
+  flex-basis: 0;
+  margin-right: 40px;
+  padding: 8px;
+  box-shadow: 0 0 1px;
+}
+.blog p:nth-child(2){
+  border: 1px solid var(--primary);
+  display: inline;
+  padding: 5px 20px;
+}
+.blog span{
+  color: var(--secondary);
+}
+.blog .hTag h4{
+  padding-bottom: 17px;
+  font-size: 1.8rem;
+}
+.blog p:nth-child(3){
+  padding: 18px 0 40px 0;
+}
+.blog .button {
+  background: var(--primary);
+  padding: 12px 45px;
+  color: var(--white);
+  font-size: 1.1rem;
+  border: 1px solid var(--white);
+}
+.blog .button:hover {
+  background: var(--white);
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 650;
+}
+.blog .widget{
+  padding: 20px;
+  background-color: var(--secondary);
+  background-image: linear-gradient(rgba(73, 201, 212, 0.8), rgba(73, 201, 212, 0.9)), url(img/footer.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  margin-bottom: 40px;
+}
+.blog .widget a{
+  color: var(--white);
+  list-style: none;
+  font-weight: 550;
+}
+.blog .widget a:hover{
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 550;
+  transition: var(--transition);
+}
+.blog .widget li{
+  list-style: none;
+  padding: 5px 0;
+}
+.blog .widget h4{
+  padding-bottom: 20px;
+  font-size: 1.8rem;
+}
+.blog a{
+  text-decoration: none;
+}
+/* * * * * * * * * * * * * * * * * Blog Single * * * * * * * * * * * * * * * * */
+.single article .row{
+  flex-direction: column !important;
+}
+.single img{
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+.single .photo {
+  margin-bottom: 15px;
+  margin-right: 0;
+  padding: 8px;
+}
+.single article {
+  padding: 0 30px 20px 0;
+  text-align: justify;
+}
+.single p:nth-child(3) {
+  padding: 20px 0 0 0;
+}
+.single p {
+  padding-bottom: 20px !important;
+}
+.blog p:nth-child(2) {
+  padding-bottom: 5px !important;
+}
